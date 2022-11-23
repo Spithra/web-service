@@ -31,8 +31,8 @@
 Для тестирования использовались команды cURL, в Windows 10 они встроены, а для более старых версий Windows
 cURL необходимо скачать. Так же в некоторые дистрибутивы Linux cURL уже предустановлен.
 Для того чтобы протестировать методы GET, POST, PUT и DELETE необходимо в командной строке ввести
-Для запроса GET - `curl -I -X GET http://localhost:8080/`
-Для запроса POST - `curl -I -X POST http://localhost:8080/`
-Для запроса PUT - `curl -I -X PUT http://localhost:8080/`
-Для запроса DELETE - `curl -I -X DELETE http://localhost:8080/`
+- Для запроса GET - `curl -I -X GET http://localhost:8080/`
+- Для запроса POST - `curl -I -X POST http://localhost:8080/`
+- Для запроса PUT - `curl -I -X PUT http://localhost:8080/`
+- Для запроса DELETE - `curl -I -X DELETE http://localhost:8080/`
 На все запросы должно отвечать 200 OK.
