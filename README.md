@@ -35,4 +35,5 @@ cURL необходимо скачать. Так же в некоторые ди
 - Для запроса POST - `curl -I -X POST http://localhost:8080/`
 - Для запроса PUT - `curl -I -X PUT http://localhost:8080/`
 - Для запроса DELETE - `curl -I -X DELETE http://localhost:8080/`
+
 На все запросы должно отвечать 200 OK.
