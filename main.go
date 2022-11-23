@@ -40,6 +40,7 @@ func main() {
 	router.POST("/", func(c *gin.Context) { c.String(http.StatusOK, "test post") })
 	router.PUT("/", func(c *gin.Context) { c.String(http.StatusOK, "test put") })
 	router.DELETE("/", func(c *gin.Context) { c.String(http.StatusOK, "test delete") })
+	router.NoRoute(func(c *gin.Context) { c.String(http.StatusOK, "Неверный адрес") })
 	// Запускаем сервер
 	router.Run("localhost:8080")
 }
