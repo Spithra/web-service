@@ -32,14 +32,14 @@ func main() {
 	// Инициализация роутера
 	router := gin.Default()
 	// Функция GET связывает метод GET http и путь /flavors с функцией getFlavors
-	router.GET("/flavors", getFlavors) // здесь передано имя функции getFlavors
+	router.GET("/", getFlavors) // здесь передано имя функции getFlavors
 	//а вот 3 строчки ниже передается результат функции
 	//Вообще POST, PUT и DELETE должны были выполнять свои функции а именно добавлять обновлять и удалять
 	//данные соответсвенно, но это пока в разработке и добавлено для возможности простестировать
 	// работоспособность методов
-	router.POST("/post", func(c *gin.Context) { c.JSON(http.StatusCreated, gin.H{"test": "test"}) })
-	router.PUT("/put", func(c *gin.Context) { c.JSON(http.StatusOK, gin.H{"test": "test"}) })
-	router.DELETE("/delete", func(c *gin.Context) { c.JSON(http.StatusOK, gin.H{"test": "test"}) })
+	router.POST("/", func(c *gin.Context) { c.String(http.StatusOK, "test post") })
+	router.PUT("/", func(c *gin.Context) { c.String(http.StatusOK, "test put") })
+	router.DELETE("/", func(c *gin.Context) { c.String(http.StatusOK, "test delete") })
 	// Запускаем сервер
 	router.Run("localhost:8080")
 }
